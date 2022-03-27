@@ -17,6 +17,6 @@ module clockDiv #(parameter DIVISOR = 2) (
     end
 
     // assign divClock out
-    assign divClk = (count < DIVISOR/2)? 1'b0:1'b1;
+    assign divClk = (count < DIVISOR/2);
 
     endmodule
