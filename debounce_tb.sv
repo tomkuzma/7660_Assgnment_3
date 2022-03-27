@@ -27,9 +27,18 @@ initial begin
     #300us rawInput = 1;
     #400us rawInput = 0;
 
+    repeat(10) @(posedge clk); 
+
+    #100us rawInput = 1;
+    #200us rawInput = 0;
+    #100us rawInput = 1;
+    #500us rawInput = 0;
+    #100us rawInput = 1;
+    #300us rawInput = 0;
+    #400us rawInput = 1;
+
     $stop // end tb
 end
-
 
 always
     #1ms clk = ~clk;
